@@ -1,0 +1,128 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GameServerLib</name>
+    </assembly>
+    <members>
+        <member name="T:GameServerLib.Client">
+            <summary>
+            Game's side client connecting to the server
+            </summary>
+        </member>
+        <member name="M:GameServerLib.Client.Connect(System.String,System.Int32)">
+            <summary>
+            Connect asynchronously
+            </summary>
+            <param name="hostname"></param>
+            <param name="port"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GameServerLib.Client.SendPacket(GameServerLib.Packet)">
+            <summary>
+            Sends packet to a server
+            </summary>
+            <param name="packet"></param>
+        </member>
+        <member name="T:GameServerLib.ClientPacketHandler">
+            <summary>
+            Handler delegate for server incoming packets
+            </summary>
+            <param name="client"></param>
+            <param name="packet"></param>
+        </member>
+        <member name="T:GameServerLib.ServerPacketHandler">
+            <summary>
+            Handler delegate for client incoming packets
+            </summary>
+            <param name="client"></param>
+            <param name="packet"></param>
+        </member>
+        <member name="T:GameServerLib.ServerPacket">
+            <summary>
+            Sent from server to client
+            </summary>
+        </member>
+        <member name="T:GameServerLib.ClientPacket">
+            <summary>
+            Sent from client to server
+            </summary>
+        </member>
+        <member name="M:GameServerLib.ClientPacket.#ctor(System.Int32,System.Int32)">
+            <summary>
+            Creates client packet for sending it to server
+            </summary>
+            <param name="packetCode"></param>
+            <param name="clientID"></param>
+        </member>
+        <member name="M:GameServerLib.ClientPacket.#ctor(GameServerLib.Packet)">
+            <summary>
+            Creates client packet from recieved packet
+            </summary>
+            <param name="recievedData"></param>
+            <param name="clientID"></param>
+        </member>
+        <member name="M:GameServerLib.ClientPacket.#ctor(System.Byte[],System.Int32)">
+            <summary>
+            Creates packet recieved from client
+            </summary>
+            <param name="recievedData"></param>
+            <param name="clientID"></param>
+        </member>
+        <member name="M:GameServerLib.Packet.#ctor(System.Int32)">
+            <summary>
+            Creates packet for sending
+            </summary>
+            <param name="packetCode"></param>
+        </member>
+        <member name="M:GameServerLib.Packet.#ctor(System.Byte[])">
+            <summary>
+            Creates packet for receiving
+            </summary>
+            <param name="recievedData"></param>
+        </member>
+        <member name="T:GameServerLib.Server">
+            <summary>
+            Basic server class used to establish connetion with clients and take care of all "low level" neworking stuff
+            </summary>
+        </member>
+        <member name="P:GameServerLib.Server.Port">
+            <summary>
+            Port that server is running on
+            </summary>
+        </member>
+        <member name="F:GameServerLib.Server.clients">
+            <summary>
+            Clients connected to the server, where key is client's ID
+            </summary>
+        </member>
+        <member name="M:GameServerLib.Server.#ctor(System.Collections.Generic.Dictionary{System.Int32,GameServerLib.ServerPacketHandler})">
+            <summary>
+            Create server with packet handlers for packet receiving
+            </summary>
+            <param name="packetHandlers"></param>
+        </member>
+        <member name="M:GameServerLib.Server.StartWaitingForClients(System.Int32)">
+            <summary>
+            Starts waiting for clients
+            </summary>
+            <param name="port"></param>
+        </member>
+        <member name="M:GameServerLib.Server.SendPacketToClient(GameServerLib.ServerPacket,System.Int32)">
+            <summary>
+            Sends packet to client with specified ID
+            </summary>
+            <param name="packet"></param>
+            <param name="ID"></param>
+        </member>
+        <member name="T:GameServerLib.ServerClient">
+            <summary>
+            Basic client implementation, only for establising connection and communication with server
+            </summary>
+        </member>
+        <member name="T:GameServerLib.Tools.Debug">
+            <summary>
+            Class for writing log files
+            </summary>
+        </member>
+    </members>
+</doc>
