@@ -77,7 +77,7 @@ namespace GameServerLib
         internal void HandlePacket(ClientPacket packet)
         {
             ClientPacket recievedPacket = new ClientPacket(packet);
-            packetHandlers[recievedPacket.packetCode](clients[packet.clientID], packet);
+            packetHandlers[recievedPacket.packetCode](packet.clientID, packet);
         }
 
         internal void SendPacket(TcpClient client, ServerPacket packet)
