@@ -4,4 +4,8 @@
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <OutputPath>C:\Users\User\Desktop\Battleships\Battleships\Assets\Plugins\GameServerLib\</OutputPath>
+  </PropertyGroup>
+  
 </Project>

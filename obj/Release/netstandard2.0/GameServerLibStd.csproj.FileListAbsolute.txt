@@ -6,3 +6,7 @@ C:\Users\User\Desktop\Battleships\Battleships\GameServerLib\obj\Release\netstand
 C:\Users\User\Desktop\Battleships\Battleships\GameServerLib\obj\Release\netstandard2.0\GameServerLibStd.csproj.CoreCompileInputs.cache
 C:\Users\User\Desktop\Battleships\Battleships\GameServerLib\obj\Release\netstandard2.0\GameServerLibStd.dll
 C:\Users\User\Desktop\Battleships\Battleships\GameServerLib\obj\Release\netstandard2.0\GameServerLibStd.pdb
+C:\Users\User\Desktop\Battleships\Battleships\GameServerLib\obj\Release\netstandard2.0\GameServerLibStd.csprojAssemblyReference.cache
+C:\Users\User\Desktop\Battleships\Battleships\Assets\Plugins\GameServerLib\netstandard2.0\GameServerLibStd.deps.json
+C:\Users\User\Desktop\Battleships\Battleships\Assets\Plugins\GameServerLib\netstandard2.0\GameServerLibStd.dll
+C:\Users\User\Desktop\Battleships\Battleships\Assets\Plugins\GameServerLib\netstandard2.0\GameServerLibStd.pdb
